@@ -1,0 +1,63 @@
+\hypertarget{classalgo_1_1NStage}{}\section{algo\+:\+:N\+Stage Class Reference}
+\label{classalgo_1_1NStage}\index{algo\+::\+N\+Stage@{algo\+::\+N\+Stage}}
+
+
+{\ttfamily \#include $<$N\+Stage.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classalgo_1_1NStage_a9706139a9ccfab10ab6458e06e42d7a5}{N\+Stage} (std\+::vector$<$ size\+\_\+t $>$ max\+\_\+frame\+\_\+skip, std\+::vector$<$ double $>$ penalty\+\_\+value, std\+::vector$<$ size\+\_\+t $>$ max\+\_\+tracklet\+\_\+count)
+\item 
+void \hyperlink{classalgo_1_1NStage_a4e4e881b9c6f65d9e86449c71ab6d778}{Run} (const \hyperlink{classcore_1_1DetectionSequence}{core\+::\+Detection\+Sequence} \&sequence, std\+::vector$<$ core\+::\+Tracklet\+Ptr $>$ \&tracks)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of the two-\/staged graph-\/based multi-\/object tracker. Extended to allow N stages. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{algo\+::\+N\+Stage@{algo\+::\+N\+Stage}!N\+Stage@{N\+Stage}}
+\index{N\+Stage@{N\+Stage}!algo\+::\+N\+Stage@{algo\+::\+N\+Stage}}
+\subsubsection[{\texorpdfstring{N\+Stage(std\+::vector$<$ size\+\_\+t $>$ max\+\_\+frame\+\_\+skip, std\+::vector$<$ double $>$ penalty\+\_\+value, std\+::vector$<$ size\+\_\+t $>$ max\+\_\+tracklet\+\_\+count)}{NStage(std::vector< size\_t > max\_frame\_skip, std::vector< double > penalty\_value, std::vector< size\_t > max\_tracklet\_count)}}]{\setlength{\rightskip}{0pt plus 5cm}algo\+::\+N\+Stage\+::\+N\+Stage (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ size\+\_\+t $>$}]{max\+\_\+frame\+\_\+skip, }
+\item[{std\+::vector$<$ double $>$}]{penalty\+\_\+value, }
+\item[{std\+::vector$<$ size\+\_\+t $>$}]{max\+\_\+tracklet\+\_\+count}
+\end{DoxyParamCaption}
+)}\hypertarget{classalgo_1_1NStage_a9706139a9ccfab10ab6458e06e42d7a5}{}\label{classalgo_1_1NStage_a9706139a9ccfab10ab6458e06e42d7a5}
+Initializes the algorithm wih the given values. The number of stages is determined by the size of the given vectors. 
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+frame\+\_\+skip} & The maximum edge length to link objects \\
+\hline
+{\em penalty\+\_\+value} & The edge value to link to source and sink \\
+\hline
+{\em max\+\_\+tracklet\+\_\+count} & The maximum number of tracklets to create \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{algo\+::\+N\+Stage@{algo\+::\+N\+Stage}!Run@{Run}}
+\index{Run@{Run}!algo\+::\+N\+Stage@{algo\+::\+N\+Stage}}
+\subsubsection[{\texorpdfstring{Run(const core\+::\+Detection\+Sequence \&sequence, std\+::vector$<$ core\+::\+Tracklet\+Ptr $>$ \&tracks)}{Run(const core::DetectionSequence \&sequence, std::vector< core::TrackletPtr > \&tracks)}}]{\setlength{\rightskip}{0pt plus 5cm}void algo\+::\+N\+Stage\+::\+Run (
+\begin{DoxyParamCaption}
+\item[{const {\bf core\+::\+Detection\+Sequence} \&}]{sequence, }
+\item[{std\+::vector$<$ core\+::\+Tracklet\+Ptr $>$ \&}]{tracks}
+\end{DoxyParamCaption}
+)}\hypertarget{classalgo_1_1NStage_a4e4e881b9c6f65d9e86449c71ab6d778}{}\label{classalgo_1_1NStage_a4e4e881b9c6f65d9e86449c71ab6d778}
+Runs the algorithm on the specified sequence and stores the found tracks into the specified tracks vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sequence} & The detection values to use \\
+\hline
+{\em tracks} & A vector to store the found tracks in \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+algo/N\+Stage.\+h\item 
+algo/N\+Stage.\+cpp\end{DoxyCompactItemize}

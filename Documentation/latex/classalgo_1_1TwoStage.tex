@@ -1,0 +1,101 @@
+\hypertarget{classalgo_1_1TwoStage}{}\section{algo\+:\+:Two\+Stage Class Reference}
+\label{classalgo_1_1TwoStage}\index{algo\+::\+Two\+Stage@{algo\+::\+Two\+Stage}}
+
+
+{\ttfamily \#include $<$Two\+Stage.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classalgo_1_1TwoStage_ae302f9ea93d56155a9dbd0be060500f7}{Two\+Stage} (size\+\_\+t max\+\_\+frame\+\_\+skip, double penalty\+\_\+value, size\+\_\+t max\+\_\+tracklet\+\_\+count)
+\item 
+void \hyperlink{classalgo_1_1TwoStage_a02dfe4e3fb244ecad13f676ce53d689a}{Create\+Object\+Graph} (Directed\+Graph \&graph, const \hyperlink{classcore_1_1DetectionSequence}{core\+::\+Detection\+Sequence} \&detections)
+\item 
+void \hyperlink{classalgo_1_1TwoStage_ae14cf79859b4275c862d6750b6bc6837}{Create\+Tracklet\+Graph} (Directed\+Graph \&obj\+\_\+graph, Directed\+Graph \&tlt\+\_\+graph, size\+\_\+t frame\+\_\+count)
+\item 
+void \hyperlink{classalgo_1_1TwoStage_a09168d0ace15d689c9d594ca16b93c38}{Extract\+Tracks} (Directed\+Graph \&tlt\+\_\+graph, size\+\_\+t depth, std\+::vector$<$ core\+::\+Tracklet\+Ptr $>$ \&tracks)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of the two-\/staged graph-\/based multi-\/object tracker. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{algo\+::\+Two\+Stage@{algo\+::\+Two\+Stage}!Two\+Stage@{Two\+Stage}}
+\index{Two\+Stage@{Two\+Stage}!algo\+::\+Two\+Stage@{algo\+::\+Two\+Stage}}
+\subsubsection[{\texorpdfstring{Two\+Stage(size\+\_\+t max\+\_\+frame\+\_\+skip, double penalty\+\_\+value, size\+\_\+t max\+\_\+tracklet\+\_\+count)}{NStage(size\_t max\_frame\_skip, double penalty\_value, size\_t max\_tracklet\_count)}}]{\setlength{\rightskip}{0pt plus 5cm}algo\+::\+Two\+Stage\+::\+Two\+Stage (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{max\+\_\+frame\+\_\+skip, }
+\item[{double}]{penalty\+\_\+value, }
+\item[{size\+\_\+t}]{max\+\_\+tracklet\+\_\+count}
+\end{DoxyParamCaption}
+)}\hypertarget{classalgo_1_1TwoStage_ae302f9ea93d56155a9dbd0be060500f7}{}\label{classalgo_1_1TwoStage_ae302f9ea93d56155a9dbd0be060500f7}
+Initializes the algorithm wih the given values. 
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+frame\+\_\+skip} & The maximum edge length to link objects \\
+\hline
+{\em penalty\+\_\+value} & The Edge value to link to source and sink \\
+\hline
+{\em max\+\_\+tracklet\+\_\+count} & The maximum number of tracklets to create \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{algo\+::\+Two\+Stage@{algo\+::\+Two\+Stage}!Create\+Object\+Graph@{Create\+Object\+Graph}}
+\index{Create\+Object\+Graph@{Create\+Object\+Graph}!algo\+::\+Two\+Stage@{algo\+::\+Two\+Stage}}
+\subsubsection[{\texorpdfstring{Create\+Object\+Graph(\+Directed\+Graph \&graph, const core\+::\+Detection\+Sequence \&detections)}{CreateObjectGraph(DirectedGraph \&graph, const core::DetectionSequence \&detections)}}]{\setlength{\rightskip}{0pt plus 5cm}void algo\+::\+Two\+Stage\+::\+Create\+Object\+Graph (
+\begin{DoxyParamCaption}
+\item[{Directed\+Graph \&}]{graph, }
+\item[{const {\bf core\+::\+Detection\+Sequence} \&}]{detections}
+\end{DoxyParamCaption}
+)}\hypertarget{classalgo_1_1TwoStage_a02dfe4e3fb244ecad13f676ce53d689a}{}\label{classalgo_1_1TwoStage_a02dfe4e3fb244ecad13f676ce53d689a}
+Creates a graph with vertices for every detected object 
+\begin{DoxyParams}{Parameters}
+{\em graph} & The graph to write into \\
+\hline
+{\em detections} & The objects to use for the graph \\
+\hline
+\end{DoxyParams}
+\index{algo\+::\+Two\+Stage@{algo\+::\+Two\+Stage}!Create\+Tracklet\+Graph@{Create\+Tracklet\+Graph}}
+\index{Create\+Tracklet\+Graph@{Create\+Tracklet\+Graph}!algo\+::\+Two\+Stage@{algo\+::\+Two\+Stage}}
+\subsubsection[{\texorpdfstring{Create\+Tracklet\+Graph(\+Directed\+Graph \&obj\+\_\+graph, Directed\+Graph \&tlt\+\_\+graph, size\+\_\+t frame\+\_\+count)}{CreateTrackletGraph(DirectedGraph \&obj\_graph, DirectedGraph \&tlt\_graph, size\_t frame\_count)}}]{\setlength{\rightskip}{0pt plus 5cm}void algo\+::\+Two\+Stage\+::\+Create\+Tracklet\+Graph (
+\begin{DoxyParamCaption}
+\item[{Directed\+Graph \&}]{obj\+\_\+graph, }
+\item[{Directed\+Graph \&}]{tlt\+\_\+graph, }
+\item[{size\+\_\+t}]{frame\+\_\+count}
+\end{DoxyParamCaption}
+)}\hypertarget{classalgo_1_1TwoStage_ae14cf79859b4275c862d6750b6bc6837}{}\label{classalgo_1_1TwoStage_ae14cf79859b4275c862d6750b6bc6837}
+Reduces the object graph into linked tracklets. 
+\begin{DoxyParams}{Parameters}
+{\em obj\+\_\+graph} & The object graph to reduce \\
+\hline
+{\em tlt\+\_\+graph} & The graph to write the tracklets in \\
+\hline
+{\em frame\+\_\+count} & The frame count of the object graph \\
+\hline
+\end{DoxyParams}
+\index{algo\+::\+Two\+Stage@{algo\+::\+Two\+Stage}!Extract\+Tracks@{Extract\+Tracks}}
+\index{Extract\+Tracks@{Extract\+Tracks}!algo\+::\+Two\+Stage@{algo\+::\+Two\+Stage}}
+\subsubsection[{\texorpdfstring{Extract\+Tracks(\+Directed\+Graph \&tlt\+\_\+graph, size\+\_\+t depth, std\+::vector$<$ core\+::\+Tracklet\+Ptr $>$ \&tracks)}{ExtractTracks(DirectedGraph \&tlt\_graph, size\_t depth, std::vector< core::TrackletPtr > \&tracks)}}]{\setlength{\rightskip}{0pt plus 5cm}void algo\+::\+Two\+Stage\+::\+Extract\+Tracks (
+\begin{DoxyParamCaption}
+\item[{Directed\+Graph \&}]{tlt\+\_\+graph, }
+\item[{size\+\_\+t}]{depth, }
+\item[{std\+::vector$<$ core\+::\+Tracklet\+Ptr $>$ \&}]{tracks}
+\end{DoxyParamCaption}
+)}\hypertarget{classalgo_1_1TwoStage_a09168d0ace15d689c9d594ca16b93c38}{}\label{classalgo_1_1TwoStage_a09168d0ace15d689c9d594ca16b93c38}
+Extracts the finished tracks from the given tracklet graph. 
+\begin{DoxyParams}{Parameters}
+{\em tlt\+\_\+graph} & The tracklet graph to extract from \\
+\hline
+{\em depth} & The depth to flatten the tracklets to \\
+\hline
+{\em tracks} & The vector to write the extracted tracks in \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+algo/Two\+Stage.\+h\item 
+algo/Two\+Stage.\+cpp\end{DoxyCompactItemize}
